@@ -5,7 +5,6 @@ public class DrawMethods {
     // varaibles
     private static boolean filled = true;
     private static Camera cam;
-    
     private static Vector canvasSize;
 
     public static void setUp() {

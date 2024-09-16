@@ -64,7 +64,11 @@ public class DirectionalLight extends Light {
 
     public int[] colorEffect(Triangle3D tri) {
         int[] triColor = tri.getColor();
-        return Lerp.colors(triColor, lightColor, lightStrength * difusion(tri));
+        double triDiffusion = difusion(tri);
+        
+        if (triDiffusion < 0)
+            return Lerp.colors(triColor, new int[]{255, 255, 255}, lightStrength * triDiffusion);
+        return Lerp.colors(triColor, lightColor, lightStrength * triDiffusion);
     }
 
     public String toString() {return "Directional Light";}
