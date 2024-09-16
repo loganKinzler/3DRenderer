@@ -27,6 +27,16 @@ public class DirectionalLight extends Light {
         lightDirection = new Vector3D(0, -1, 0);
     }
 
+    public DirectionalLight(int[] color, boolean localLight) {
+        super(0.25, color, localLight);
+        lightDirection = new Vector3D(0, -1, 0);
+    }
+
+    public DirectionalLight(int r, int b, int g, boolean localLight) {
+        super(0.25, r, g, b, localLight);
+        lightDirection = new Vector3D(0, -1, 0);
+    }
+    
     public DirectionalLight(double strength, int[] color) {
         super(strength, color);
         lightDirection = new Vector3D(0, -1, 0);

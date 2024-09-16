@@ -7,8 +7,8 @@ public class Main {
         Light dLight = new DirectionalLight(new int[] {
             (int) (Math.random()*255),
             (int) (Math.random()*255),
-            (int) (Math.random()*255)
-        });
+            (int) (Math.random()*255),
+        }, true);
 
         Camera cam = new Camera();
         cam.setFOV(Math.toRadians(70));
